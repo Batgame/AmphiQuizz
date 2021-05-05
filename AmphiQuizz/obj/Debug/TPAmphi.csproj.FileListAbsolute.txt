@@ -1,0 +1,15 @@
+P:\Sem2\M2104\TPAmphi\TPAmphi\bin\Debug\TPAmphi.exe.config
+P:\Sem2\M2104\TPAmphi\TPAmphi\bin\Debug\TPAmphi.exe
+P:\Sem2\M2104\TPAmphi\TPAmphi\bin\Debug\TPAmphi.pdb
+P:\Sem2\M2104\TPAmphi\TPAmphi\obj\Debug\TPAmphi.csprojAssemblyReference.cache
+P:\Sem2\M2104\TPAmphi\TPAmphi\obj\Debug\MainWindow.g.cs
+P:\Sem2\M2104\TPAmphi\TPAmphi\obj\Debug\App.g.cs
+P:\Sem2\M2104\TPAmphi\TPAmphi\obj\Debug\TPAmphi_MarkupCompile.cache
+P:\Sem2\M2104\TPAmphi\TPAmphi\obj\Debug\TPAmphi_MarkupCompile.lref
+P:\Sem2\M2104\TPAmphi\TPAmphi\obj\Debug\MainWindow.baml
+P:\Sem2\M2104\TPAmphi\TPAmphi\obj\Debug\TPAmphi.g.resources
+P:\Sem2\M2104\TPAmphi\TPAmphi\obj\Debug\TPAmphi.Properties.Resources.resources
+P:\Sem2\M2104\TPAmphi\TPAmphi\obj\Debug\TPAmphi.csproj.GenerateResource.cache
+P:\Sem2\M2104\TPAmphi\TPAmphi\obj\Debug\TPAmphi.csproj.CoreCompileInputs.cache
+P:\Sem2\M2104\TPAmphi\TPAmphi\obj\Debug\TPAmphi.exe
+P:\Sem2\M2104\TPAmphi\TPAmphi\obj\Debug\TPAmphi.pdb
