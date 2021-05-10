@@ -24,5 +24,9 @@ namespace TPAmphi
         {
             InitializeComponent();
         }
+
+        private void NoterButton(object sender, RoutedEventArgs e)
+        {
+        }
     }
 }

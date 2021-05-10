@@ -56,9 +56,9 @@
                     </GridView>
                 </ListView.View>
             </ListView>
-            <DataGrid HorizontalAlignment="Left" Margin="23,135,0,80" Grid.Row="1" Width="280" ItemsSource="{Binding Prof, }">
+            <DataGrid x:Name="DataProfesseur"  HorizontalAlignment="Left" Margin="23,135,0,80" Grid.Row="1" Width="280">
                 <DataGrid.Columns>
-                    <DataGridCheckBoxColumn Width="35"></DataGridCheckBoxColumn>
+                    <DataGridCheckBoxColumn x:Name="checkProf" Width="35"></DataGridCheckBoxColumn>
                     <DataGridTextColumn Header="Nom professeur" Width="100"/>
                     <DataGridTextColumn Header="Prénom professeur" Width="110"/>
                 </DataGrid.Columns>
@@ -70,7 +70,7 @@
                     <DataGridTextColumn Header="Signification de la note" Width="140"/>
                 </DataGrid.Columns>
             </DataGrid>
-            <Button Content="Noter" Margin="25,0,35,25" Grid.Row="1" Height="25" VerticalAlignment="Bottom"/>
+            <Button Content="Noter" Margin="25,0,35,25" Grid.Row="1" Height="25" VerticalAlignment="Bottom" Click="Button_Click"/>
 
         </Grid>
 
