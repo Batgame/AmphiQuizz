@@ -1,0 +1,15 @@
+C:\Users\batge\Documents\TFS\AmphiQuizz\obj\Debug\AmphiQuizz.csprojAssemblyReference.cache
+C:\Users\batge\Documents\TFS\AmphiQuizz\obj\Debug\MainWindow.g.cs
+C:\Users\batge\Documents\TFS\AmphiQuizz\obj\Debug\App.g.cs
+C:\Users\batge\Documents\TFS\AmphiQuizz\obj\Debug\TPAmphi_MarkupCompile.cache
+C:\Users\batge\Documents\TFS\AmphiQuizz\obj\Debug\TPAmphi_MarkupCompile.lref
+C:\Users\batge\Documents\TFS\AmphiQuizz\obj\Debug\TPAmphi.exe
+C:\Users\batge\Documents\TFS\AmphiQuizz\obj\Debug\TPAmphi.pdb
+C:\Users\batge\Documents\TFS\AmphiQuizz\bin\Debug\TPAmphi.exe.config
+C:\Users\batge\Documents\TFS\AmphiQuizz\bin\Debug\TPAmphi.exe
+C:\Users\batge\Documents\TFS\AmphiQuizz\bin\Debug\TPAmphi.pdb
+C:\Users\batge\Documents\TFS\AmphiQuizz\obj\Debug\MainWindow.baml
+C:\Users\batge\Documents\TFS\AmphiQuizz\obj\Debug\TPAmphi.g.resources
+C:\Users\batge\Documents\TFS\AmphiQuizz\obj\Debug\TPAmphi.Properties.Resources.resources
+C:\Users\batge\Documents\TFS\AmphiQuizz\obj\Debug\AmphiQuizz.csproj.GenerateResource.cache
+C:\Users\batge\Documents\TFS\AmphiQuizz\obj\Debug\AmphiQuizz.csproj.CoreCompileInputs.cache

@@ -28,5 +28,10 @@ namespace TPAmphi
         private void NoterButton(object sender, RoutedEventArgs e)
         {
         }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }
