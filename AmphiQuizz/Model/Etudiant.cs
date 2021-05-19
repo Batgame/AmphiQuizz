@@ -38,35 +38,64 @@ namespace AmphiQuizz
         private ObservableCollection<Notes> listeNote;
         public ObservableCollection<Notes> ListeNote { get => listeNote; set => listeNote = value; }
 
+        /// <summary>
+        /// Constructeur de la classe étudiant
+        /// </summary>
         public Etudiant() : base()
         {
         }
 
+        /// <summary>
+        /// Retourne une chaîne de caractère décrivant l'objet actuel
+        /// </summary>
         public override string ToString()
         {
             return base.ToString() + "\nId Etu : " + IdEtu + "\nPhoto : " + pathPhoto;
         }
+
+        /// <summary>
+        /// Fonction non utilisée issu de l'inteface ICrud
+        /// </summary>
+        /// <param name="e"></param>
+        /// <param name="p"></param>
+        /// <param name="n"></param>
 
         public void Create(Etudiant e, Prof p, Notes n)
         {
             throw new NotImplementedException();
         }
 
+        /// <summary>
+        /// Fonction non utilisée issu de l'inteface ICrud
+        /// </summary>
+
         public void Read()
         {
             throw new NotImplementedException();
         }
+
+        /// <summary>
+        /// Fonction non utilisée issu de l'inteface ICrud
+        /// </summary>
 
         public void Update()
         {
             throw new NotImplementedException();
         }
 
+        /// <summary>
+        /// Fonction non utilisée issu de l'inteface ICrud
+        /// </summary>
+
         public void Delete()
         {
             throw new NotImplementedException();
         }
 
+        /// <summary>
+        /// Recupère tous les étudiants issus de la table [iut-acy\genodb].etudiant et leurs notes respectives
+        /// </summary>
+        /// <returns> retourne une ObservableCollection d'étudiants </returns>
         public ObservableCollection<Etudiant> FindAll()
         {
             ObservableCollection<Etudiant> listeEtudiant = new ObservableCollection<Etudiant>();
@@ -97,7 +126,7 @@ namespace AmphiQuizz
                             }
                             catch (Exception ee)
                             {
-                                unEtudiant.ProfileImage = BitmapFrame.Create(new Uri("C:\\Users\\genodb\\source\\Workspaces\\BT22\\AmphiQuizz\\AmphiQuizz\\user.png"));
+                                unEtudiant.ProfileImage = BitmapFrame.Create(new Uri("../../user.png", UriKind.Relative));
                             }
                             
                             reader2 = access.getData("select idetu, idprof, datenote, note from [iut-acy\\genodb].note where idetu = " + unEtudiant.IdEtu + ";");
@@ -138,6 +167,12 @@ namespace AmphiQuizz
             }
             return listeEtudiant;
         }
+
+        /// <summary>
+        /// Fonction non utilisée issu de l'inteface ICrud
+        /// </summary>
+        /// <param name="criteres"></param>
+        /// <returns></returns>
 
         public ObservableCollection<Etudiant> FindBySelection(string criteres)
         {

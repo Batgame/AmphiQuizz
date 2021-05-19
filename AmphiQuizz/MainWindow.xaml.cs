@@ -68,7 +68,7 @@ namespace AmphiQuizz
                     if(ee.IdGroupe == ggg.nGroupe)
                     {
                         newEtuList.Add(ee);
-                    }
+                    }    
                 }
             }
 
@@ -98,7 +98,14 @@ namespace AmphiQuizz
         private void selectedEtu(object sender, SelectionChangedEventArgs e)
         {
             Etudiant ee = (Etudiant)lvEtu.SelectedItem;
-            lvHistorique.ItemsSource = ee.ListeNote;
+            if(ee != null)
+            {
+                lvHistorique.ItemsSource = ee.ListeNote;
+            }
+           
+            lvProfesseur.SelectedIndex = -1;
+            lvNote.SelectedIndex = -1;
+           
 
         }
 
@@ -142,6 +149,17 @@ namespace AmphiQuizz
                 }
             }
            
+        }
+
+        private void clickNote(object sender, SelectionChangedEventArgs e)
+        {
+            Notes noteEnCours = (Notes)lvHistorique.SelectedItem;
+
+            if(noteEnCours != null)
+            {
+                lvProfesseur.SelectedItem = noteEnCours.UnProf;
+                lvNote.SelectedItem = ApplicationData.listeNotes.Find(x => x.UneNote == noteEnCours.UneNote);
+            }
         }
     }
 }

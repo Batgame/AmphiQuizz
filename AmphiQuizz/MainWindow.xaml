@@ -57,7 +57,7 @@
             <Label Content="Prénom : " HorizontalAlignment="Left" Height="24" Margin="273,77,0,0" VerticalAlignment="Top" Width="79"/>
 			<Label Content="Groupe : " HorizontalAlignment="Left" Height="24" Margin="273,115,0,0" VerticalAlignment="Top" Width="79"/>		
 			<Image Margin="74,26,0,32" x:Name="imgEtu" Source="{Binding SelectedItem.ProfileImage, ElementName=lvEtu}" HorizontalAlignment="Left" Width="141"/>
-            <ListView x:Name="lvHistorique" Grid.Row="1" Margin="23,31,35,0" Height="88" VerticalAlignment="Top">
+            <ListView x:Name="lvHistorique" Grid.Row="1" Margin="23,31,35,0" Height="88" VerticalAlignment="Top" SelectionChanged="clickNote">
                 <ListView.View>
                     <GridView>
                         <GridViewColumn Header="Note" Width="70" DisplayMemberBinding="{Binding UneNote}"/>

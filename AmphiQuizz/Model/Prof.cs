@@ -11,29 +11,50 @@ namespace AmphiQuizz
 {
     public class Prof : Personne, ICrud<Prof>
     {
+        /// <summary>
+        /// Instancie un nouveau prof
+        /// </summary>
         public Prof(): base()
         { }
 
+        /// <summary>
+        /// Fonction non utilisée issu de l'inteface ICrud
+        /// </summary>
         public void Create(Etudiant e, Prof p, Notes n)
         {
             throw new NotImplementedException();
         }
 
+        /// <summary>
+        /// Fonction non utilisée issu de l'inteface ICrud
+        /// </summary>
         public void Read()
         {
             throw new NotImplementedException();
         }
 
+        /// <summary>
+        /// Fonction non utilisée issu de l'inteface ICrud
+        /// </summary>
         public void Update()
         {
             throw new NotImplementedException();
         }
 
+        /// <summary>
+        /// Fonction non utilisée issu de l'inteface ICrud
+        /// </summary>
         public void Delete()
         {
             throw new NotImplementedException();
         }
 
+        /// <summary>
+        /// Recupère tous les profs issu de la table [iut-acy\genodb].prof
+        /// </summary>
+        /// <returns>
+        /// Retourne une ObservableCollection de prof ou un message en cas d'erreur 
+        /// </returns>
         public ObservableCollection<Prof> FindAll()
         {
             ObservableCollection<Prof> listeProf = new ObservableCollection<Prof>();
@@ -71,6 +92,9 @@ namespace AmphiQuizz
             return listeProf;
         }
 
+        /// <summary>
+        /// Fonction non utilisée issu de l'inteface ICrud
+        /// </summary>
         public ObservableCollection<Prof> FindBySelection(string criteres)
         {
             throw new NotImplementedException();

@@ -17,10 +17,16 @@ namespace AmphiQuizz
         private string prenomPersonne;
         public string PrenomPersonne { get => prenomPersonne; set => prenomPersonne = value; }
 
+        /// <summary>
+        /// Instancie une nouvelle personne
+        /// </summary>
         public Personne()        
         {
         }
 
+        /// <summary>
+        /// Retourne une chaine de caractère qui représente l'objet actuel 
+        /// </summary>
         public override string ToString()
         {
             return "ID Personne : " + IdPersonne + "\nNom : " + NomPersonne + "\nPrénom : " + PrenomPersonne;

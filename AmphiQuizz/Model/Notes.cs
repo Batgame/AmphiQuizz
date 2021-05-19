@@ -45,26 +45,29 @@ namespace AmphiQuizz
 
 
         /// <summary>
-        /// Instancie une nouvelle note 
-        /// <paramref name="pNote" 
+        /// Instancie une nouvelle note
         /// </summary>
+        /// <param name="pNote"> Représente la valeur de la note </param>
         public Notes(int pNote)
         {  
             this.UneNote = pNote;
         }
 
+        /// <summary>
+        /// Fonction non utilisée issu de l'inteface ICrud
+        /// </summary>
+        /// <returns></returns>
         public ObservableCollection<Notes> FindAll()
         {
-            /*
-            ObservableCollection<Notes> listNotes = new ObservableCollection<Notes>();
-            listNotes.Add(new Notes { Note = 0, Signification = "L'élève est absent" });
-            listNotes.Add(new Notes { Note = 1, Signification = "Donne une mauvaise réponse" });
-            listNotes.Add(new Notes { Note = 2, Signification = "Donne une bonne réponse" });
-            return listNotes;
-            */
             throw new NotImplementedException();
         }
 
+        /// <summary>
+        /// Insère une note dans la base de donnée
+        /// </summary>
+        /// <param name="e"> Représente l'objet de l'étudiant noté</param>
+        /// <param name="p"> Représente l'objet du professeur qui donne la note</param>
+        /// <param name="n"> Représente la note donnée en elle même</param>
         public void Create(Etudiant e, Prof p, Notes n)
         {
             DataAccess access = new DataAccess();
@@ -82,21 +85,34 @@ namespace AmphiQuizz
             }
         }
 
+        /// <summary>
+        /// Fonction non utilisée issu de l'inteface ICrud
+        /// </summary>
         public void Read()
         {
             throw new NotImplementedException();
         }
+
+        /// <summary>
+        /// Fonction non utilisée issu de l'inteface ICrud
+        /// </summary>
 
         public void Update()
         {
             throw new NotImplementedException();
         }
 
+        /// <summary>
+        /// Fonction non utilisée issu de l'inteface ICrud
+        /// </summary>
         public void Delete()
         {
             throw new NotImplementedException();
         }
 
+        /// <summary>
+        /// Fonction non utilisée issu de l'inteface ICrud
+        /// </summary>
 
         public ObservableCollection<Notes> FindBySelection(string criteres)
         {

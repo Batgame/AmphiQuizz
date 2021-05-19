@@ -28,7 +28,7 @@ namespace AmphiQuizz
         }
 
 
-        public static ObservableCollection<Notes> listeNotes
+        public static List<Notes> listeNotes
         {
             get;
             set;
@@ -37,13 +37,12 @@ namespace AmphiQuizz
 
         public static void loadApplicationData()
         {
-         
             //chargement des tables
             Etudiant unEtudiant = new Etudiant();
 
             Prof unProf = new Prof();
             Groupe unGroupe = new Groupe();
-            listeNotes = new ObservableCollection<Notes>();
+            listeNotes = new List<Notes>();
             listeProfs = unProf.FindAll();
             listeGroupes = unGroupe.FindAll();
             listeEtudiants = unEtudiant.FindAll();

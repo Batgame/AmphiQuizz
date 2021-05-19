@@ -21,52 +21,52 @@ namespace AmphiQuizz
             get; set;
         }
         
-        ///<summary>
-        ///Instancie un nouveau groupe 
-        ///</summary>
+        /// <summary>
+        /// Instancie un nouveau groupe 
+        /// </summary>
         public Groupe()
         {
         }
 
-        ///<summary>
-        ///Fonction non utilisée issu de l'inteface ICrud
-        ///</summary>
+        /// <summary>
+        /// Fonction non utilisée issu de l'inteface ICrud
+        /// </summary>
         public void Create(Etudiant e, Prof p, Notes n)
         {
             throw new NotImplementedException();
         }
 
-        ///<summary>
-        ///Fonction non utilisée issu de l'inteface ICrud
-        ///</summary>
+        /// <summary>
+        /// Fonction non utilisée issu de l'inteface ICrud
+        /// </summary>
         public void Read()
         {
             throw new NotImplementedException();
         }
 
-        ///<summary>
-        ///Fonction non utilisée issu de l'inteface ICrud
-        ///</summary>
+        /// <summary>
+        /// Fonction non utilisée issu de l'inteface ICrud
+        /// </summary>
         
         public void Update()
         {
             throw new NotImplementedException();
         }
 
-        ///<summary>
-        ///Fonction non utilisée issu de l'inteface ICrud
-        ///</summary>
+        /// <summary>
+        /// Fonction non utilisée issu de l'inteface ICrud
+        /// </summary>
         public void Delete()
         {
             throw new NotImplementedException();
         }
 
-        ///<summary>
-        ///Recupère tous les groupes issu de la table [iut-acy\genodb].groupe
-        ///</summary>
-        ///<returns>
-        ///Retourne une ObservableCollection de groupe ou un message en cas d'erreur 
-        ///</returns>
+        /// <summary>
+        /// Recupère tous les groupes issus de la table [iut-acy\genodb].groupe
+        /// </summary>
+        /// <returns>
+        /// Retourne une ObservableCollection de groupe ou un message en cas d'erreur 
+        /// </returns>
         public ObservableCollection<Groupe> FindAll()
         {
             ObservableCollection<Groupe> listeGroupes = new ObservableCollection<Groupe>();
@@ -102,9 +102,9 @@ namespace AmphiQuizz
             return listeGroupes;
         }
 
-        ///<summary>
-        ///Fonction non utilisée issu de l'inteface ICrud
-        ///<summary>
+        /// <summary>
+        /// Fonction non utilisée issu de l'inteface ICrud
+        /// <summary>
         public ObservableCollection<Groupe> FindBySelection(string criteres)
         {
             throw new NotImplementedException();
