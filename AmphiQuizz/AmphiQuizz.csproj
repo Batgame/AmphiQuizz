@@ -67,6 +67,8 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="ApplicationData.cs" />
+    <Compile Include="Crud.cs" />
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
@@ -77,6 +79,8 @@
     <Compile Include="Model\Groupe.cs" />
     <Compile Include="Model\Notes.cs" />
     <Compile Include="Model\Personne.cs" />
+    <Compile Include="Model\DataAccess.cs" />
+    <Compile Include="Model\Prof.cs" />
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>

@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace TPAmphi.Model
+namespace AmphiQuizz
 {
     public abstract class Personne
     {
@@ -17,18 +17,13 @@ namespace TPAmphi.Model
         private string prenomPersonne;
         public string PrenomPersonne { get => prenomPersonne; set => prenomPersonne = value; }
 
-        public Personne (int pIdPersonne, string pNomPersonne, string pPrenomPersonne)        
+        public Personne()        
         {
-            this.IdPersonne = pIdPersonne;
-            this.NomPersonne = pNomPersonne;
-            this.PrenomPersonne = pPrenomPersonne;
         }
 
         public override string ToString()
         {
             return "ID Personne : " + IdPersonne + "\nNom : " + NomPersonne + "\nPrénom : " + PrenomPersonne;
         }
-
-
     }
 }

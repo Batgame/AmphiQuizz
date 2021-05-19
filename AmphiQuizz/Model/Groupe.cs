@@ -1,43 +1,113 @@
-﻿using System;
+﻿
+
+using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace TPAmphi.Model
+namespace AmphiQuizz
 {
-    public class Groupe
+    public class Groupe : ICrud<Groupe>
     {
-        private int idGroupe;
-        public int IdGroupe { get => idGroupe; set => idGroupe = value; }
-
-        private string libelleGroupe;
-        public string LibelleGroupe { get => libelleGroupe; set => libelleGroupe = value; }
-
-        public Groupe(int pIdGroupe, string pLibelleGroupe)
+        public long nGroupe
         {
-            this.IdGroupe = pIdGroupe;
-            this.LibelleGroupe = pLibelleGroupe;
+            get; set;
+        }
+        public string libelleGroupe
+        {
+            get; set;
+        }
+        
+        ///<summary>
+        ///Instancie un nouveau groupe 
+        ///</summary>
+        public Groupe()
+        {
         }
 
-        public override string ToString()
+        ///<summary>
+        ///Fonction non utilisée issu de l'inteface ICrud
+        ///</summary>
+        public void Create(Etudiant e, Prof p, Notes n)
         {
-            return LibelleGroupe;
+            throw new NotImplementedException();
         }
 
-        public override bool Equals(object obj)
+        ///<summary>
+        ///Fonction non utilisée issu de l'inteface ICrud
+        ///</summary>
+        public void Read()
         {
-            return obj is Groupe groupe &&
-                   IdGroupe == groupe.IdGroupe &&
-                   LibelleGroupe == groupe.LibelleGroupe;
+            throw new NotImplementedException();
         }
 
-        public override int GetHashCode()
+        ///<summary>
+        ///Fonction non utilisée issu de l'inteface ICrud
+        ///</summary>
+        
+        public void Update()
         {
-            int hashCode = 827657482;
-            hashCode = hashCode * -1521134295 + IdGroupe.GetHashCode();
-            hashCode = hashCode * -1521134295 + EqualityComparer<string>.Default.GetHashCode(LibelleGroupe);
-            return hashCode;
+            throw new NotImplementedException();
+        }
+
+        ///<summary>
+        ///Fonction non utilisée issu de l'inteface ICrud
+        ///</summary>
+        public void Delete()
+        {
+            throw new NotImplementedException();
+        }
+
+        ///<summary>
+        ///Recupère tous les groupes issu de la table [iut-acy\genodb].groupe
+        ///</summary>
+        ///<returns>
+        ///Retourne une ObservableCollection de groupe ou un message en cas d'erreur 
+        ///</returns>
+        public ObservableCollection<Groupe> FindAll()
+        {
+            ObservableCollection<Groupe> listeGroupes = new ObservableCollection<Groupe>();
+            DataAccess access = new DataAccess();
+            SqlDataReader reader;
+            try
+            {
+                if (access.openConnection())
+                {
+                    reader = access.getData("select idgroupe, libellegroupe from [IUT-ACY\\genodb].GROUPE;");
+                    if (reader.HasRows)
+                    {
+                        while (reader.Read())
+                        {
+                            Groupe unGroupe = new Groupe();
+                            unGroupe.nGroupe = (int)reader.GetInt32(0);
+                            unGroupe.libelleGroupe = reader.GetString(1);
+                            listeGroupes.Add(unGroupe);
+                        }
+                    }
+                    else
+                    {
+                        System.Windows.MessageBox.Show("No rows found.", "Important Message");
+                    }
+                    reader.Close();
+                    access.closeConnection();
+                }
+            }
+            catch (Exception ex)
+            {
+                System.Windows.MessageBox.Show(ex.Message, "Important Message");
+            }
+            return listeGroupes;
+        }
+
+        ///<summary>
+        ///Fonction non utilisée issu de l'inteface ICrud
+        ///<summary>
+        public ObservableCollection<Groupe> FindBySelection(string criteres)
+        {
+            throw new NotImplementedException();
         }
     }
 }
