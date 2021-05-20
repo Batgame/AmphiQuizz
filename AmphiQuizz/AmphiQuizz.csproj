@@ -8,7 +8,7 @@
     <OutputType>WinExe</OutputType>
     <RootNamespace>TPAmphi</RootNamespace>
     <AssemblyName>TPAmphi</AssemblyName>
-    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <WarningLevel>4</WarningLevel>
@@ -18,6 +18,7 @@
     <SccLocalPath>SAK</SccLocalPath>
     <SccAuxPath>SAK</SccAuxPath>
     <SccProvider>SAK</SccProvider>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -37,6 +38,13 @@
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>46955%281%29.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup />
+  <PropertyGroup>
+    <NoWin32Manifest>true</NoWin32Manifest>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -67,20 +75,20 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="ApplicationData.cs" />
-    <Compile Include="Crud.cs" />
+    <Compile Include="DataAccess\ApplicationData.cs" />
+    <Compile Include="CRUD\Crud.cs" />
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Model\Etudiant.cs" />
-    <Compile Include="Model\Groupe.cs" />
-    <Compile Include="Model\Notes.cs" />
-    <Compile Include="Model\Personne.cs" />
-    <Compile Include="Model\DataAccess.cs" />
-    <Compile Include="Model\Prof.cs" />
+    <Compile Include="CRUD\Etudiant.cs" />
+    <Compile Include="CRUD\Groupe.cs" />
+    <Compile Include="CRUD\Notes.cs" />
+    <Compile Include="CRUD\Personne.cs" />
+    <Compile Include="DataAccess\DataAccess.cs" />
+    <Compile Include="CRUD\Prof.cs" />
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -108,6 +116,9 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="user.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="46955%281%29.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
